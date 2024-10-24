@@ -50,10 +50,11 @@ jobs:
           source venv/bin/activate
 
       - name: Install dependencies
-        run: apt-get update \
-    && apt-get install -y --no-install-recommends ffmpeg aria2 \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+        run: apt-get update
+    run: apt-get install -y --no-install-recommends ffmpeg aria2
+    
+   run: apt-get clean \
+    run: rm -rf /var/lib/apt/lists/
 run: FROM nikolaik/python-nodejs:python3.10-nodejs19
 
 
